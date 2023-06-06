@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "pyscicam"
+version = "0.4.4"
+description = "Scientific and High speed camera file importer for Python."
+authors = ["Daniel Duke"]
+license = "GPL-3.0+"
+readme = "README.md"
+packages = [
+    {include = "pySciCam", from = "src"},
+    {include = "bayer" , from ="src"},
+    ]
+build = "build.py"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+tqdm = ">=1"
+joblib = ">=0.1"
+natsort = ">= 1"
+numpy = ">=1"
+
+[tool.poetry.group.dev.dependencies]
+Cython = "^0.29.35"
+
+[build-system]
+requires = ["poetry", "setuptools", "wheel", "cython"]
+build-backend = "poetry.masonry.api"
+
+#[tool.poetry.build]
+#generate-setup-file = true

@@ -1,7 +1,7 @@
 # pySciCam
 
-Note: this is a custom Fork of pySciCam to (hopefully) build with poetry. This
-may fail horribly - use at your own risk. 
+Note: this is an experimental Fork of pySciCam to (hopefully) build with
+poetry. This may fail horribly - use at your own risk. 
 
 
 Class to read images from high speed and scientific cameras in Python

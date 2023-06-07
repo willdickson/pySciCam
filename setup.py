@@ -19,19 +19,10 @@
     
     Please see help(pySciCam) for more information.
 """
-
-__author__="Daniel Duke <daniel.duke@monash.edu>"
-__version__="0.4.4"
-__license__="GPL-3.0+"
-__copyright__="Copyright (c) 2018-2022 LTRAC"
-
-
 from distutils.core import setup
 from distutils.extension import Extension
 from Cython.Build import cythonize
 import numpy
-
-long_description = """Scientific and High speed camera file importer for Python. The aim of this code is to get your movie, imageset or binary blob into a usable NumPy array as quickly as possible. Uses a range  of libraries (PythonMagick, imageio, Pillow) to achieve widest compatibility and best performance for generic image and movie formats, with parallel file I/O where possible. Supports custom binary file formats for a range of scientific cameras."""
 
 cython_modules = [
     Extension(
@@ -56,14 +47,7 @@ c_libraries = [
     )
 ]
 
-setup(name="pySciCam",
-      version=__version__,
-      description="Scientific and High speed camera file importer for Python.",
-      author="Daniel Duke",
-      author_email="daniel.duke@monash.edu",
-      license=__license__,
-      long_description=long_description,
-      packages=['pySciCam','bayer'],
+setup(packages=['pySciCam','bayer'],
       package_dir={'': 'src'},
       url='daniel-duke.net',
       install_requires=[

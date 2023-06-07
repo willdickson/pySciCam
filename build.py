@@ -13,6 +13,7 @@ ext_modules = [
 ]
 
 def build(setup_kwargs: Dict[str, Any]) -> None:
+    print('hello')
     setup_kwargs.update(
         {
             "ext_modules": ext_modules,
@@ -20,3 +21,4 @@ def build(setup_kwargs: Dict[str, Any]) -> None:
             "zip_safe": False,
         }
     )
+

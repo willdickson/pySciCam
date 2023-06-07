@@ -10,6 +10,10 @@ packages = [
     {include = "bayer" , from ="src"},
     ]
 build = "build.py"
+include = [
+    {path = "src/*.so", format = "wheel"},
+    {path = "src/pySciCam/*.so", format = "wheel"}
+    ]
 
 [tool.poetry.dependencies]
 python = "^3.10"

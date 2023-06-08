@@ -50,12 +50,6 @@ c_libraries = [
 setup(packages=['pySciCam','bayer'],
       package_dir={'': 'src'},
       url='daniel-duke.net',
-      install_requires=[
-          'tqdm>=1',
-          'joblib>=0.1',
-          'natsort>=1',
-          'numpy>=1'
-      ],
       ext_modules=cythonize(cython_modules, language_level = "3") + c_libraries,
       include_dirs=[numpy.get_include()]
 )
